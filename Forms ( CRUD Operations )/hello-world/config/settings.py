@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'accounts'
 
 ]
+AUTH_USER_MODEL = 'accounts.CustomUser' 
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -99,6 +100,7 @@ AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
+
 ]
 
 
