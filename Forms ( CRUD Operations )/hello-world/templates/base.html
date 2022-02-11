@@ -27,6 +27,16 @@
       <div class="flex">
         <h2 class="hero-title">Hi {{user }}!</h2>
         <p>
+          <a href="{%url 'password_change' %}" class="nav-links underline"
+            >Change Password</a
+          >
+        </p>
+      <p>
+        <a href = "{% url 'password_reset' %}" class="nav-links underline"
+          >Reset Password</a>
+          </p>
+
+        <p>
           <a href="{% url 'logout' %}" class="nav-links color-red">Log out</a>
         </p>
       </div>
@@ -37,12 +47,16 @@
       <p class="blog-card-subtitle">You are not logged in.</p>
       <div class="flex">
         <a href="{% url 'login' %}" class="nav-links underline">Log In</a>
-        {% endif %}
-        <a href="{% url 'signup' %}" class="nav-links underline">Sign up</a>
+
+          {% endif %}
+          <a href="{% url 'signup' %}" class="nav-links underline">Sign up</a>
+        </div>
       </div>
     </div>
     <div class="container">{% block login %} {% endblock login %}</div>
+
     <div class="container">{% block signup %} {% endblock signup %}</div>
+
     <footer>
       <div class="container">
         <div class="footer">
